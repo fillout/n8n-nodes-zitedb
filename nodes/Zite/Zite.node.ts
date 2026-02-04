@@ -50,3 +50,4 @@ export class FriendGrid implements INodeType {
         async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
         }
     }
+}
