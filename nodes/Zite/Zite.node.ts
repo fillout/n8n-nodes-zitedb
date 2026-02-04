@@ -5,6 +5,7 @@ import {
     INodeTypeDescription,
     NodeConnectionTypes
 } from "n8n-workflow";
+import { tableDescription } from './resources/table';
 
 export class Zite implements INodeType {
     description: INodeTypeDescription = {
@@ -43,7 +44,8 @@ export class Zite implements INodeType {
                     }
                 ],
                 default: 'record'
-            }
+            },
+            ...tableDescription,
         ],
     }
 
