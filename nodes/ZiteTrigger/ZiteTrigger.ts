@@ -190,7 +190,7 @@ export class ZiteTrigger implements INodeType {
                 const response = (await ziteApiRequest.call(
                     this,
                     "POST",
-                    `/api/v1/bases/${baseId.value}/webhooks`,
+                    `/bases/${baseId.value}/webhooks`,
                     body,
                 )) as IDataObject;
 
@@ -225,7 +225,7 @@ export class ZiteTrigger implements INodeType {
                     await ziteApiRequest.call(
                         this,
                         "DELETE",
-                        `/api/v1/bases/${baseId.value}/webhooks/${webhookId}`,
+                        `/bases/${baseId.value}/webhooks/${webhookId}`,
                     );
                 } catch (error) {
                     return false;
