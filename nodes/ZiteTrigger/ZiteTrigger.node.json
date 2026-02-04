@@ -1,0 +1,13 @@
+{
+  "node": "n8n-nodes-base.ziteTrigger",
+  "nodeVersion": "1.0",
+  "codexVersion": "1.0",
+  "categories": ["Data & Storage"],
+  "resources": {
+    "credentialDocumentation": [
+      {
+        "url": "https://build.fillout.com/home/settings/developer"
+      }
+    ]
+  }
+}
