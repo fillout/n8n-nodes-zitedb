@@ -17,6 +17,23 @@ export class ZiteApi implements ICredentialType {
       typeOptions: { password: true },
       default: "",
     },
+    {
+      displayName: "Base URL",
+      name: "baseUrl",
+      type: "options",
+      options: [
+        {
+          name: "https://tables.fillout.com/api/v1",
+          value: "https://tables.fillout.com/api/v1",
+        },
+        {
+          name: "https://eu-tables.fillout.com/api/v1",
+          value: "https://eu-tables.fillout.com/api/v1",
+        },
+      ],
+      default: "https://tables.fillout.com/api/v1",
+      description: "This may be different if your Zite account data is stored in another region",
+    },
   ];
 
   authenticate: IAuthenticateGeneric = {
@@ -30,8 +47,8 @@ export class ZiteApi implements ICredentialType {
 
   test: ICredentialTestRequest = {
     request: {
-      baseURL: "https://tables.fillout.com",
-      url: "/api/v1/bases",
+      baseURL: "={{$credentials?.baseUrl}}",
+      url: "/test",
     },
   };
 }
