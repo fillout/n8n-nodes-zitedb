@@ -30,8 +30,8 @@ export class ZiteApi implements ICredentialType {
 
   test: ICredentialTestRequest = {
     request: {
-      baseURL: "={{$credentials?.baseUrl}}",
-      url: "/test",
+      baseURL: "https://tables.fillout.com",
+      url: "/api/v1/bases",
     },
   };
 }
