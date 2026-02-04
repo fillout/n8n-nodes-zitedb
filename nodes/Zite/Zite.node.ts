@@ -6,7 +6,7 @@ import {
     NodeConnectionTypes
 } from "n8n-workflow";
 
-export class FriendGrid implements INodeType {
+export class Zite implements INodeType {
     description: INodeTypeDescription = {
         displayName: "Zite Database",
         name: "zite",
