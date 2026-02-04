@@ -18,7 +18,7 @@ export class ZiteTrigger implements INodeType {
     description: INodeTypeDescription = {
         displayName: "Zite Trigger",
         name: "ziteTrigger",
-        icon: "file:zitelogo.png",
+        icon: "file:zite-icon.svg",
         group: ["trigger"],
         version: 1,
         description: "Triggers when events occur in Zite (records, tables, or fields)",
