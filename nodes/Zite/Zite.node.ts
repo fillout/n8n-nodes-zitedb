@@ -4,6 +4,10 @@ import {
     NodeConnectionTypes
 } from "n8n-workflow";
 import { tableDescription } from "./resources/table";
+import { getBases } from "./listSearch/getBases";
+import { getTables } from "./listSearch/getTables";
+import { getFields } from "./listSearch/getFields";
+import { getRecords } from "./listSearch/getRecords";
 
 export class Zite implements INodeType {
     description: INodeTypeDescription = {
@@ -51,5 +55,14 @@ export class Zite implements INodeType {
             },
             ...tableDescription,
         ],
+    }
+
+    methods = {
+        listSearch: {
+            getBases,
+            getTables,
+            getFields,
+            getRecords,
+        },
     }
 }
