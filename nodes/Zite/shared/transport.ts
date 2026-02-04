@@ -6,7 +6,7 @@ import type {
     IHttpRequestMethods,
     IDataObject,
     IHttpRequestOptions,
-} from 'n8n-workflow';
+} from "n8n-workflow";
 
 export async function ziteApiRequest(
     this: IHookFunctions | IExecuteFunctions | IExecuteSingleFunctions | ILoadOptionsFunctions,
@@ -23,12 +23,12 @@ export async function ziteApiRequest(
         body,
         qs,
         headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
+            Accept: "application/json",
+            "Content-Type": "application/json",
         },
     };
 
-    return this.helpers.httpRequestWithAuthentication.call(this, 'ziteApi', options);
+    return this.helpers.httpRequestWithAuthentication.call(this, "ziteApi", options);
 }
 
 export function transformRecord(record: IDataObject): IDataObject {
