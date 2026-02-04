@@ -1,5 +1,4 @@
 import {
-    IDataObject,
     IExecuteFunctions,
     INodeExecutionData,
     INodeType,
@@ -46,8 +45,11 @@ export class FriendGrid implements INodeType {
                 default: 'record'
             }
         ],
+    }
 
-        async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
-        }
+    async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
+        return [this.helpers.returnJsonArray({
+            name: "hello"
+        })];
     }
 }
