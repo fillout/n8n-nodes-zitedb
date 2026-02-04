@@ -1,11 +1,9 @@
 import {
-    IExecuteFunctions,
-    INodeExecutionData,
     INodeType,
     INodeTypeDescription,
     NodeConnectionTypes
 } from "n8n-workflow";
-import { tableDescription } from './resources/table';
+import { tableDescription } from "./resources/table";
 
 export class Zite implements INodeType {
     description: INodeTypeDescription = {
@@ -26,32 +24,32 @@ export class Zite implements INodeType {
                 required: true,
             },
         ],
-
+        requestDefaults: {
+            baseURL: "={{$credentials?.baseUrl}}",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+        },
         properties: [
             {
-                displayName: 'Resource',
-                name: 'resource',
-                type: 'options',
+                displayName: "Resource",
+                name: "resource",
+                type: "options",
                 noDataExpression: true,
                 options: [
                     {
-                        name: 'Record',
-                        value: 'record',
+                        name: "Record",
+                        value: "record",
                     },
                     {
-                        name: 'Table',
-                        value: 'table',
+                        name: "Table",
+                        value: "table",
                     }
                 ],
-                default: 'record'
+                default: "record"
             },
             ...tableDescription,
         ],
-    }
-
-    async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
-        return [this.helpers.returnJsonArray({
-            name: "hello"
-        })];
     }
 }

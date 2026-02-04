@@ -29,7 +29,7 @@ export const tableDescription: INodeProperties[] = [
         routing: {
           request: {
             method: "GET",
-            url: "=/api/v1/bases/{{$parameter.baseId}}",
+            url: "=/bases/{{$parameter.baseId}}",
           },
           output: {
             postReceive: [
@@ -55,7 +55,7 @@ export const tableDescription: INodeProperties[] = [
         routing: {
           request: {
             method: "GET",
-            url: "=/api/v1/bases/{{$parameter.baseId}}",
+            url: "=/bases/{{$parameter.baseId}}",
           },
           output: {
             postReceive: [
