@@ -4,6 +4,7 @@ import {
     NodeConnectionTypes
 } from "n8n-workflow";
 import { tableDescription } from "./resources/table";
+import { recordDescription } from "./resources/record";
 import { getBases } from "./listSearch/getBases";
 import { getTables } from "./listSearch/getTables";
 import { getFields } from "./listSearch/getFields";
@@ -54,6 +55,7 @@ export class Zite implements INodeType {
                 default: "record"
             },
             ...tableDescription,
+            ...recordDescription,
         ],
     }
 
