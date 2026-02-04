@@ -10,7 +10,7 @@ import { getTables } from "./listSearch/getTables";
 import { getFields } from "./listSearch/getFields";
 import { getRecords } from "./listSearch/getRecords";
 
-export class ZiteTrigger implements INodeType {
+export class Zite implements INodeType {
     description: INodeTypeDescription = {
         displayName: "Zite Database",
         name: "zite",
