@@ -19,7 +19,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc && cp nodes/Zite/zite-icon.svg dist/nodes/Zite",
+    "build": "rm -rf dist && tsc && cp zite-icon.svg dist/nodes/Zite && cp zite-icon.svg dist/nodes/ZiteTrigger",
     "dev": "tsc --watch",
     "format": "prettier nodes credentials --write",
     "lint": "eslint nodes credentials package.json",
