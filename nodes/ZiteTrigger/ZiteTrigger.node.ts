@@ -43,24 +43,12 @@ export class ZiteTrigger implements INodeType {
                 required: true,
                 options: [
                     {
-                        name: "New Record",
-                        value: "record.created",
-                    },
-                    {
-                        name: "Updated Record",
-                        value: "record.updated",
+                        name: "Deleted Field",
+                        value: "field.deleted",
                     },
                     {
                         name: "Deleted Record",
                         value: "record.deleted",
-                    },
-                    {
-                        name: "New Table",
-                        value: "table.created",
-                    },
-                    {
-                        name: "Updated Table",
-                        value: "table.updated",
                     },
                     {
                         name: "Deleted Table",
@@ -71,12 +59,24 @@ export class ZiteTrigger implements INodeType {
                         value: "field.created",
                     },
                     {
+                        name: "New Record",
+                        value: "record.created",
+                    },
+                    {
+                        name: "New Table",
+                        value: "table.created",
+                    },
+                    {
                         name: "Updated Field",
                         value: "field.updated",
                     },
                     {
-                        name: "Deleted Field",
-                        value: "field.deleted",
+                        name: "Updated Record",
+                        value: "record.updated",
+                    },
+                    {
+                        name: "Updated Table",
+                        value: "table.updated",
                     },
                 ],
                 default: "record.created",
@@ -111,7 +111,6 @@ export class ZiteTrigger implements INodeType {
                 name: "tableId",
                 type: "resourceLocator",
                 default: { mode: "list", value: "" },
-                required: false,
                 displayOptions: {
                     show: {
                         eventType: [
