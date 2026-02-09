@@ -17,6 +17,7 @@ export class Zite implements INodeType {
         icon: "file:zite-icon.svg",
         group: ["transform"],
         version: 1,
+        subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
         description: "Interact with databases in Zite",
         defaults: {
             name: "Zite Database"
