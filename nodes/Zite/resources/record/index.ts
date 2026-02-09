@@ -1,9 +1,10 @@
-import type {
+import {
   INodeProperties,
   IExecuteSingleFunctions,
   INodeExecutionData,
   IDataObject,
   IHttpRequestOptions,
+  NodeOperationError
 } from "n8n-workflow";
 import { ziteApiRequest } from "../../shared/transport";
 import { recordGetAllDescription } from "./getAll";
@@ -121,7 +122,8 @@ export const recordDescription: INodeProperties[] = [
                 const field = fields.find((f) => f.id === searchField.value);
 
                 if (!field) {
-                  throw new Error(
+                  throw new NodeOperationError(
+                    this.getNode(),
                     `Field specified in "Search Field" parameter could not be found. Check that the field ID is correct and exists in the selected table.`,
                   );
                 }

@@ -5,7 +5,8 @@ import {
     INodeType,
     INodeTypeDescription,
     IWebhookResponseData,
-    NodeConnectionTypes
+    NodeConnectionTypes,
+    NodeOperationError
 } from "n8n-workflow";
 import { ziteApiRequest } from "../Zite/shared/transport";
 import { transformRecord } from "../Zite/shared/transport";
@@ -168,7 +169,8 @@ export class ZiteTrigger implements INodeType {
                 const eventType = this.getNodeParameter("eventType") as string;
 
                 if (!webhookUrl) {
-                    throw new Error(
+                    throw new NodeOperationError(
+                        this.getNode(),
                         "Webhook URL could not be generated. Ensure the workflow is saved and activated, then try again.",
                     );
                 }
@@ -199,7 +201,8 @@ export class ZiteTrigger implements INodeType {
                     ((response.data as IDataObject | undefined)?.id as string | undefined);
 
                 if (!webhookId) {
-                    throw new Error(
+                    throw new NodeOperationError(
+                        this.getNode(),
                         `Webhook could not be created. The API response did not include a webhook ID. Check your API credentials and base ID, then try again.`,
                     );
                 }
