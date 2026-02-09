@@ -2,4 +2,16 @@
 
 ![Banner](https://raw.githubusercontent.com/fillout/n8n-nodes-zitedb/refs/heads/main/banner.png)
 
-This package provides n8n community nodes for interacting with databases in Zite. [Learn more](https://www.fillout.com/help/database/overview).
+This is an n8n community node that lets you interact with databases in Zite. [Learn more](https://www.fillout.com/help/database/overview).
+
+## Installation
+
+Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) on the n8n documentation website.
+
+## Usage
+
+Add the trigger in n8n, and when creating a credential, you'll need to get an API key from your [account settings](https://build.fillout.com/home/settings/developer) in Zite. Make sure that the correct base URL is set, as you can have your data hosted in different regions with [Fillout Enterprise](https://www.fillout.com/enterprise).
+
+## Developers
+
+For instructions on testing this node on a local n8n instance for development purposes, see https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/
