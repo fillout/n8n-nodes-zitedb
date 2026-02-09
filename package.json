@@ -1,14 +1,15 @@
 {
   "name": "n8n-nodes-zitedb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "n8n package for Zite Database",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "author": {
-    "name": "Zite",
-    "url": "https://zite.com"
+    "name": "Fillout",
+    "url": "https://fillout.com",
+    "email": "support@fillout.com"
   },
   "repository": {
     "type": "git",
